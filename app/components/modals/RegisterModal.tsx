@@ -1,9 +1,16 @@
-import React from 'react'
+'use clinet';
 
-const  RegisterModal = () => {
-  return (
-    <div>registerModal</div>
-  )
-}
+import axios from 'axios';
+import { AiFillGithub } from 'react-icons/ai';
+import { FcGoogle } from 'react-icons/fc';
 
-export default RegisterModal
+import { useCallback, useState } from 'react';
+import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
+import useRegisterModal from '../hooks/useRegisterModal';
+
+
+const RegisterModal = () => {
+  return <div>registerModal</div>;
+};
+
+export default RegisterModal;
