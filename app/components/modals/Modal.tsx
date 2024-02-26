@@ -17,7 +17,7 @@ interface ModalProps {
   secondaryActionLabel?: string;
 }
 const Modal: React.FC<ModalProps> = ({
-  isOpen,
+  isOpen=true,
   onClose,
   onSubmit,
   title,
@@ -117,7 +117,7 @@ const Modal: React.FC<ModalProps> = ({
         w-full
         bg-white
         outline-none
-        focue:outline-none
+        focus:outline-none
         
         "
             >
