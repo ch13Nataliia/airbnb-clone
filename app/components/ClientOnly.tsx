@@ -1,5 +1,4 @@
 'use client'
-import { Chilanka } from "next/font/google"
 import { useState, useEffect } from "react"
 
 
