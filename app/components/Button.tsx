@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {Icon && (
         <Icon
-          size-24
+          size={24}
           className="
         absolute
         left-4
