@@ -9,6 +9,7 @@ import { signOut } from 'next-auth/react';
 import { SafeUser } from '@/app/types';
 import { useRouter } from 'next/navigation';
 
+
 interface UserMenuProps {
   currentUser?: SafeUser | null;
 }
@@ -22,6 +23,13 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     setIsOpen((value) => !value);
   }, []);
 
+
+  const onRent = useCallback(() => {
+    if (!currentUser) {
+      return loginModal.onOpen()
+    }
+
+  },[currentUser, loginModal])
   return (
     <div
       className="
@@ -37,7 +45,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
       "
       >
         <div
-          onClick={() => {}}
+          onClick={onRent}
           className="
         hidden
         md:block
