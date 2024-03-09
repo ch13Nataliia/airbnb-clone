@@ -26,7 +26,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
 
     const updatedQuery: any = {
       ...currentQuery,
-      categiry: label,
+      category: label,
     };
 
     if (params?.get('category') === label) {
@@ -43,9 +43,10 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
       },
     );
     router.push(url);
-  }, []);
+  }, [label, params, router]);
   return (
     <div
+     onClick={handelClick}
       className={` 
    flex
   flex-col
